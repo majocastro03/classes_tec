@@ -1,0 +1,15 @@
+========DIAGNOSTICO INICIAL 2025-09-01========
+MySQL (Solo crear base de datos)
+Python (básico realizó una pagina web con python)
+JavaScript (básico)
+CSS
+Java (no lo conoce mucho)
+Arreglos (no conoce)
+variables (no sabe diferenciarlas bien)
+Estructuras lineales – selectivas – repetitivas
+- if (tiene conocimiento pero no lo tiene claro)
+- switch (no lo conoce)
+- while (lo conoce pero no diferencia entre do while y while)
+- for lo conoce (falta practica)
+Pseudocodigo y algoritmos (conoce pero falta practica)
+========TIPOS DE DATOS Y CICLOS REPETITIVOS 2025-09-03========

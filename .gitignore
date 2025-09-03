@@ -1,0 +1,10 @@
+# Archivos de Office
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pptx
+*.ppt
+
+# Archivos PDF
+*.pdf
