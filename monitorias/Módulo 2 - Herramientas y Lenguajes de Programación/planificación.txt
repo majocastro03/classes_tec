@@ -1,0 +1,17 @@
+- Instalación y configuración de Visual Studio Code
+- Creación de repositorio en GitHub y comandos Git
+
+- Creación de proyecto con Angular
+https://www.nodejs.tech/es/download (descargar node js)
+node -v
+npm -v (comprobar instalación de node)
+npm install -g @angular/cli (instalar angular)
+ng versión (comprobar instalación de angular)
+ng new angular-login
+cd angular-login
+npm install
+ng serve -o
+- Modelado de un proyecto en diagramas UML
+https://staruml.io/ (descargar staruml para modelar)
+- Desarrollo de un programa usando TypeScript en Angular
+
