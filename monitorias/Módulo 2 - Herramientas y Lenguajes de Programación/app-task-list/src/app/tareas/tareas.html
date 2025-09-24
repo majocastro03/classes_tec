@@ -1,0 +1,14 @@
+<p>tareas works!</p>
+<div>
+  <input [(ngModel)]="nuevaTarea" placeholder="Escribe una tarea..." />
+  <button (click)="agregarTarea()">Agregar</button>
+</div>
+
+<ul>
+  @for (tarea of tareas; track tarea; let i = $index) {
+    <li>
+      {{ tarea }}
+      <button (click)="eliminarTarea(i)">❌</button>
+    </li>
+  }
+</ul>
