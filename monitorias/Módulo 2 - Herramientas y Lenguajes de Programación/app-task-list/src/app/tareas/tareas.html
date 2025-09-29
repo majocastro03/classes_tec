@@ -7,7 +7,7 @@
 <ul>
   @for (tarea of tareas; track tarea; let i = $index) {
     <li>
-      {{ tarea }}
+      {{ tarea.descripcion }}
       <button (click)="eliminarTarea(i)">❌</button>
     </li>
   }
