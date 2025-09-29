@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 // Agregar FormsModule para usar ngModel
 import { FormsModule } from '@angular/forms';
-// Importar el modelo Tarea
+// Importar el type Tarea
 import { Tarea } from '../models/tarea';
+// Importar el type Universidad
+import { Universidad } from '../models/universidad';
 
 @Component({
   selector: 'app-tareas',
@@ -12,8 +14,20 @@ import { Tarea } from '../models/tarea';
   styleUrls: ['./tareas.css']
 })
 export class Tareas {
-  // Crear un arreglo de tareas de tipo Tarea vacío
+  // Declarar un arreglo de tareas de tipo Tarea vacío
   tareas: Tarea[] = [];
+  universidades: Universidad[] = [];
+  tarea: Tarea = {
+        id: 1,
+        descripcion: "Nueva Tarea",
+        completada: false,
+        fechaCreacion: '2025-09-19',
+        nota: 5,
+        fechaVencimiento: '2025-09-28'
+      };
+
+
+
   // Variable para enlazar con el input del HTML
   nuevaTarea: string = '';
   // Contador para asignar IDs únicos a las tareas
@@ -25,9 +39,12 @@ export class Tareas {
     if (this.nuevaTarea !== '') {
       // Crear una nueva tarea usando el modelo Tarea
       const tarea: Tarea = {
-        id: this.contadorId,
-        descripcion: this.nuevaTarea,
-        completada: false
+        id: 1,
+        descripcion: "Nueva Tarea",
+        completada: false,
+        fechaCreacion: '2025-09-19',
+        nota: 5,
+        fechaVencimiento: '2025-09-28'
       };
       // Agregar la nueva tarea al arreglo de tareas
       this.tareas.push(tarea);
