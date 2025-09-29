@@ -1,13 +1,20 @@
 <p>tareas works!</p>
+<!--Agregar tarea-->
 <div>
+  <!-- Campo de entrada para nueva tarea -->
   <input [(ngModel)]="nuevaTarea" placeholder="Escribe una tarea..." />
+  <!-- Botón para agregar la tarea -->
   <button (click)="agregarTarea()">Agregar</button>
 </div>
 
+<!-- Lista de tareas -->
 <ul>
+  <!-- Recorrer lista de tareas -->
   @for (tarea of tareas; track tarea; let i = $index) {
     <li>
+      <!-- Descripción de la tarea -->
       {{ tarea.descripcion }}
+      <!-- Botón para eliminar la tarea -->
       <button (click)="eliminarTarea(i)">❌</button>
     </li>
   }

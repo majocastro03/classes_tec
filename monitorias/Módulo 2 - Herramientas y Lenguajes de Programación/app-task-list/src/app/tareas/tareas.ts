@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+// Agregar FormsModule para usar ngModel
 import { FormsModule } from '@angular/forms';
 // Importar el modelo Tarea
 import { Tarea } from '../models/tarea';
 
 @Component({
   selector: 'app-tareas',
+  // Agregar FormsModule a los imports para usar ngModel
   imports: [FormsModule],
   templateUrl: './tareas.html',
-  styleUrl: './tareas.css'
+  styleUrls: ['./tareas.css']
 })
 export class Tareas {
   // Crear un arreglo de tareas de tipo Tarea vacío
