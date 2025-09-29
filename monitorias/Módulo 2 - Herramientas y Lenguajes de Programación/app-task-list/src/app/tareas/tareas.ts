@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Tarea } from '../models/tarea';
 
 @Component({
   selector: 'app-tareas',
@@ -8,17 +9,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './tareas.css'
 })
 export class Tareas {
-  tareas: string[] = [];
-  nuevaTarea: string = '';
-
-  agregarTarea() {
-    if (this.nuevaTarea.trim() !== '') {
-      this.tareas.push(this.nuevaTarea);
-      this.nuevaTarea = '';
-    }
-  }
-
-  eliminarTarea(index: number) {
-    this.tareas.splice(index, 1);
-  }
+  
 }
