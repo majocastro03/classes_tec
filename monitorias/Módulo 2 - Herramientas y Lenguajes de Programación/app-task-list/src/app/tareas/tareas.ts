@@ -17,16 +17,6 @@ export class Tareas {
   // Declarar un arreglo de tareas de tipo Tarea vacío
   tareas: Tarea[] = [];
   universidades: Universidad[] = [];
-  tarea: Tarea = {
-        id: 1,
-        descripcion: "Nueva Tarea",
-        completada: false,
-        fechaCreacion: '2025-09-19',
-        nota: 5,
-        fechaVencimiento: '2025-09-28'
-      };
-
-
 
   // Variable para enlazar con el input del HTML
   nuevaTarea: string = '';
@@ -34,13 +24,13 @@ export class Tareas {
   contadorId: number = 1;
 
   // Método para agregar una nueva tarea
-  agregarTarea() {
+  agregarTarea(nuevaTarea: string) {
     // Agregar una nueva tarea solo si el campo no está vacío
     if (this.nuevaTarea !== '') {
       // Crear una nueva tarea usando el modelo Tarea
       const tarea: Tarea = {
         id: 1,
-        descripcion: "Nueva Tarea",
+        descripcion: nuevaTarea,
         completada: false,
         fechaCreacion: '2025-09-19',
         nota: 5,
