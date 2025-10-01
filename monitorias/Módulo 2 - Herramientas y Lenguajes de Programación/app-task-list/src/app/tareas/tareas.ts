@@ -23,6 +23,22 @@ export class Tareas {
   // Contador para asignar IDs únicos a las tareas
   contadorId: number = 1;
 
+agregarNuevaTarea(nombreTarea: string) {
+  // Crear una nueva tarea usando el modelo Tarea
+  if(nombreTarea !== '') {
+    //Imprimir verdadero
+    console.log("Verdadero");
+  }
+}
+
+
+
+
+
+
+
+
+
   // Método para agregar una nueva tarea
   agregarTarea(nuevaTarea: string) {
     // Agregar una nueva tarea solo si el campo no está vacío
