@@ -18,18 +18,40 @@ export class Tareas {
   tareas: Tarea[] = [];
   universidades: Universidad[] = [];
 
+  descripciones: string[] = [];
+  edades: number[] = [];
+
+  descripcionTarea01: string = 'Descripcion tarea 01';
+
+  edad01: number = 20;
+
   // Variable para enlazar con el input del HTML
   nuevaTarea: string = '';
   // Contador para asignar IDs únicos a las tareas
   contadorId: number = 1;
 
-agregarNuevaTarea(nombreTarea: string) {
-  // Crear una nueva tarea usando el modelo Tarea
-  if(nombreTarea !== '') {
-    //Imprimir verdadero
-    console.log("Verdadero");
+
+
+  agregarNuevaTarea(nombreTarea: string) {
+    // Crear una nueva tarea usando el modelo Tarea
+    if (nombreTarea !== '') {
+      //Imprimir verdadero
+      console.log("Verdadero");
+      const edad02 = 20;
+      this.edades.push(this.edad01) // Agregar edad01 variable global
+      this.edades.push(edad02) // Agregar edad02 variable local
+
+      const tarea01: Tarea = {
+        id: 1,
+        descripcion: 'Tarea 01',
+        completada: false,
+        fechaCreacion: '2025-09-19',
+        nota: 5,
+        fechaVencimiento: '2025-09-28'
+      };
+      this.tareas.push(tarea01);
+    }
   }
-}
 
 
 
