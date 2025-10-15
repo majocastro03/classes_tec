@@ -14,52 +14,24 @@ import { Universidad } from '../models/universidad';
   styleUrls: ['./tareas.css']
 })
 export class Tareas {
+  //universidades: Universidad[] = [];
+
+  //descripciones: string[] = [];
+  //edades: number[] = [];
+
+  //descripcionTarea01: string = 'Descripcion tarea 01';
+
+  //edad01: number = 20;
+
   // Declarar un arreglo de tareas de tipo Tarea vacío
   tareas: Tarea[] = [];
-  universidades: Universidad[] = [];
-
-  descripciones: string[] = [];
-  edades: number[] = [];
-
-  descripcionTarea01: string = 'Descripcion tarea 01';
-
-  edad01: number = 20;
-
   // Variable para enlazar con el input del HTML
   nuevaTarea: string = '';
   // Contador para asignar IDs únicos a las tareas
-  contadorId: number = 1;
+  id: number = 1;
 
-
-
-  agregarNuevaTarea(nombreTarea: string) {
-    // Crear una nueva tarea usando el modelo Tarea
-    if (nombreTarea !== '') {
-      //Imprimir verdadero
-      console.log("Verdadero");
-      const edad02 = 20;
-      this.edades.push(this.edad01) // Agregar edad01 variable global
-      this.edades.push(edad02) // Agregar edad02 variable local
-
-      const tarea01: Tarea = {
-        id: 1,
-        descripcion: 'Tarea 01',
-        completada: false,
-        fechaCreacion: '2025-09-19',
-        nota: 5,
-        fechaVencimiento: '2025-09-28'
-      };
-      this.tareas.push(tarea01);
-    }
-  }
-
-
-
-
-
-
-
-
+  nombreUsuario: string = '';
+  nombreUniversidad: string = ''
 
   // Método para agregar una nueva tarea
   agregarTarea(nuevaTarea: string) {
@@ -67,7 +39,7 @@ export class Tareas {
     if (this.nuevaTarea !== '') {
       // Crear una nueva tarea usando el modelo Tarea
       const tarea: Tarea = {
-        id: 1,
+        id: this.id,
         descripcion: nuevaTarea,
         completada: false,
         fechaCreacion: '2025-09-19',
@@ -79,7 +51,7 @@ export class Tareas {
       // Limpiar el campo de entrada y actualizar el contador de IDs
       this.nuevaTarea = '';
       // Incrementar el contador de IDs
-      this.contadorId = this.contadorId + 1;
+      this.id = this.id + 1;
     }
   }
   // Método para eliminar una tarea por su índice
@@ -108,4 +80,25 @@ export class Tareas {
     // Reemplazar el array original con el nuevo array
     this.tareas = nuevasTareas;
   }
+
+  //  agregarNuevaTarea(nombreTarea: string) {
+  //   // Crear una nueva tarea usando el modelo Tarea
+  //   if (nombreTarea !== '') {
+  //     //Imprimir verdadero
+  //     console.log("Verdadero");
+  //     const edad02 = 20;
+  //     this.edades.push(this.edad01) // Agregar edad01 variable global
+  //     this.edades.push(edad02) // Agregar edad02 variable local
+
+  //     const tarea01: Tarea = {
+  //       id: 1,
+  //       descripcion: 'Tarea 01',
+  //       completada: false,
+  //       fechaCreacion: '2025-09-19',
+  //       nota: 5,
+  //       fechaVencimiento: '2025-09-28'
+  //     };
+  //     this.tareas.push(tarea01);
+  //   }
+  // }
 }
