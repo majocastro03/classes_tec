@@ -1,9 +1,14 @@
 <p>tareas works!</p>
 <!--Agregar tarea-->
+<!-- Es una etiqueta contenedora que agrupa otros elementos (como inputs, botones, textos, etc.).
+ No tiene formato propio, pero se usa para organizar el contenido o aplicar estilos más adelante con CSS -->
 <div>
   <!-- Campo de entrada para nueva tarea -->
+  <!-- Es una etiqueta HTML de entrada de datos, usada para que el usuario escriba texto. -->
   <input [(ngModel)]="nuevaTarea" placeholder="Escribe una tarea..." />
   <!-- Botón para agregar la tarea -->
+   <!-- Muestra un botón que el usuario puede presionar.
+   El texto entre las etiquetas (Agregar) es lo que se ve en el botón -->
   <button (click)="agregarTarea(nuevaTarea)">Agregar</button>
 </div>
 
@@ -19,3 +24,5 @@
     </li>
   }
 </ul>
+
+
